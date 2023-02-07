@@ -4,53 +4,22 @@ using UnityEngine;
 
 namespace project7_PadMaster
 {
-
-
-    public class Pad : MonoBehaviour
+    public class PadMaster : MonoBehaviour
     {
 
-        private PadMaster padMaster;
-        [SerializeField]
-        private bool isButton;
+        public Pad pad1;        // Assign Pad through Inspector
+        public Pad pad2;        // Assign Pad through Inspector
 
-
-        public bool IsButton
+        public void Reevaluate()
         {
-
-            get
+            if (pad1.IsActive && pad2.IsActive)
             {
-                return isButton;
-
+                Debug.Log("Conditions fulfilled. Firing xxx!");
             }
-            set
+            else
             {
-                isButton = value;
-                padMaster.Reevaluate();
+                Debug.Log("Conditions not fulfilled. Doing nothing");
             }
         }
-
-        private void Start()
-        {
-            padMaster = GetComponentInParent<PadMaster>();
-        }
-
-        private void OnValidate()
-        {
-
-            if (padMaster != null)
-            {
-                padMaster.Reevaluate();
-            }
-
-
-        }
-
-
-
     }
-
-
-
 }
-
-

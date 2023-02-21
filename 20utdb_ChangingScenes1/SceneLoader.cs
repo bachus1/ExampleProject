@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace utdb_ChangingScenes1
+namespace utdb20_ChangingScenes1
 {
     public class SceneLoader : MonoBehaviour
     {

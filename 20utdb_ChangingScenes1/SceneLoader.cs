@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,7 +6,6 @@ namespace utdb_ChangingScenes1
 {
     public class SceneLoader : MonoBehaviour
     {
-
         static bool sceneFlag = false;
         public Button button;
 
@@ -37,6 +34,3 @@ namespace utdb_ChangingScenes1
         }
     }
 }
-
-
-
